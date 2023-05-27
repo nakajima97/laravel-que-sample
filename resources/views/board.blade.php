@@ -13,7 +13,8 @@
     <h1 class="text-2xl font-bold mb-4">掲示板</h1>
 
     <!-- スレッドの投稿フォーム -->
-    <form class="mb-4">
+    <form class="mb-4" action="/comment" method="POST">
+      @csrf
       <div class="mb-2">
         <label for="name" class="block font-semibold">投稿者名</label>
         <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded px-2 py-1">
