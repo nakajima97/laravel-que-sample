@@ -13,6 +13,11 @@ class CommentService
       "body" => $body
     ]);
   }
+
+  public function getAll()
+  {
+    return Comment::all()->sortBy("created_at");
+  }
 }
 
 

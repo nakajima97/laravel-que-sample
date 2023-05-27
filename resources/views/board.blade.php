@@ -28,16 +28,9 @@
 
     <!-- コメント一覧 -->
     <div class="bg-white rounded-lg p-4">
-      <div class="mb-4">
-        <h3 class="font-semibold">投稿者名1</h3>
-        <p class="text-gray-500">投稿日時: 2023-05-22</p>
-        <p>コメント1</p>
-      </div>
-      <div class="mb-4">
-        <h3 class="font-semibold">投稿者名2</h3>
-        <p class="text-gray-500">投稿日時: 2023-05-23</p>
-        <p>コメント2</p>
-      </div>
+      @foreach ($comments as $comment)
+        <x-comment author-name="{{$comment->author_name}}" created-at="{{ $comment->created_at }}" comment="{{ $comment->body }}" />
+      @endforeach
     </div>
   </div>
 </body>
